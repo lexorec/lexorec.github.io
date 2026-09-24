@@ -1,0 +1,13 @@
+{
+  "name": "Javier Ordóñez Román — LEXOR Abogados",
+  "short_name": "LEXOR Abogados",
+  "lang": "es",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0c5236",
+  "theme_color": "#0c5236",
+  "icons": [
+    { "src": "icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}
