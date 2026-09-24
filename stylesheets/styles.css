@@ -217,6 +217,67 @@ strong { color: var(--ink); font-weight: 600; }
   word-break: break-word;
 }
 
+/* ---- Blog (syndicated from WordPress) ---- */
+.blog { margin-top: clamp(2.5rem, 5vw, 4rem); }
+
+.blog__title {
+  font-family: var(--serif);
+  font-weight: 600;
+  color: var(--ink);
+  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.75rem);
+  letter-spacing: 0.02em;
+  margin: 0 0 0.35rem;
+}
+
+.blog-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: var(--measure);
+  border-top: 2px solid var(--ink);
+}
+.blog__status {
+  padding: 1.5rem 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.blog-post {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.blog-post__title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+.blog-post__title a {
+  color: var(--ink);
+  text-decoration-color: color-mix(in srgb, var(--ink) 22%, transparent);
+}
+.blog-post__title a:hover { color: var(--accent); }
+.blog-post__date {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.blog-post__excerpt {
+  margin: 0.6rem 0 0;
+  font-size: 0.95rem;
+  color: var(--body);
+}
+
+.blog__more {
+  margin: 1.4rem 0 0;
+  font-size: 0.9375rem;
+}
+.blog__more a { font-weight: 500; }
+
 /* ---- Responsive ---- */
 @media (max-width: 760px) {
   .masthead__body {
