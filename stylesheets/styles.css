@@ -60,19 +60,24 @@ strong { color: var(--ink); font-weight: 600; }
 }
 
 /* ---- Masthead ---- */
-.masthead__brand {
-  width: clamp(150px, 20vw, 200px);
-  height: auto;
-  mix-blend-mode: multiply; /* melt the logo's white box into the parchment */
+.masthead__header {
+  padding-bottom: clamp(1rem, 2vw, 1.4rem);
   margin-bottom: clamp(1.75rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--line);
+}
+.masthead__brand {
+  width: clamp(140px, 17vw, 184px);
+  height: auto;
+  margin: 0;
+  mix-blend-mode: multiply; /* drop the logo's white box onto the page */
 }
 
 .masthead__body {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  gap: clamp(1.5rem, 4vw, 3.5rem);
-  padding-bottom: clamp(1.5rem, 3vw, 2.25rem);
+  gap: clamp(1.75rem, 5vw, 4rem);
+  padding-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
   border-bottom: 1px solid var(--line);
 }
 
@@ -118,7 +123,7 @@ strong { color: var(--ink); font-weight: 600; }
   transition: transform .25s ease, box-shadow .25s ease;
 }
 .portrait img {
-  width: clamp(112px, 15vw, 168px);
+  width: clamp(200px, 25vw, 288px);
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 3px;
@@ -219,7 +224,8 @@ strong { color: var(--ink); font-weight: 600; }
     align-items: flex-start;
     gap: 1.75rem;
   }
-  .portrait { order: -1; }
+  .portrait { order: -1; align-self: center; }
+  .portrait img { width: min(260px, 66vw); }
   .layout { grid-template-columns: 1fr; gap: 2.5rem; }
   .contact { position: static; }
   .contact {
