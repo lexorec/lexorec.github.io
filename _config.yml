@@ -1,0 +1,11 @@
+# Sitio de Javier Ordóñez Román — LEXOR Abogados (GitHub Pages + Jekyll)
+# El contenido editable está en _data/site.yml (Pages CMS: .pages.yml)
+title: "Javier Ordóñez Román — LEXOR Abogados"
+url: "https://lexorec.github.io"
+baseurl: ""
+theme: null
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

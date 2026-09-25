@@ -1,0 +1,47 @@
+# Configuración de Pages CMS (https://app.pagescms.org)
+content:
+  - name: sitio
+    label: Contenido del sitio
+    type: file
+    path: _data/site.yml
+    format: yaml
+    fields:
+      - name: bio
+        label: Presentación
+        type: rich-text
+
+      - name: publications
+        label: Publicaciones
+        type: object
+        list: true
+        fields:
+          - { name: title, label: "Título", type: string, required: true }
+          - { name: collaboration, label: "Colaboración (opcional)", type: string }
+          - { name: journal, label: "Revista y país", type: string }
+          - { name: details, label: "Fecha, ISSN, volumen…", type: string }
+          - { name: url, label: "Enlace al artículo", type: string }
+
+      - name: contact
+        label: Contacto
+        type: object
+        fields:
+          - { name: street, label: "Dirección", type: string }
+          - { name: postal_code, label: "Código postal", type: string }
+          - { name: city, label: "Ciudad (p. ej. Machala – El Oro – Ecuador)", type: string }
+          - { name: email, label: "Email", type: string }
+          - { name: blog_url, label: "Enlace del blog", type: string }
+          - { name: twitter, label: "Usuario de Twitter (sin @)", type: string }
+
+      - name: blog
+        label: Notas del blog
+        type: object
+        fields:
+          - { name: title, label: "Título de la sección", type: string }
+
+      - name: seo
+        label: Buscadores y redes sociales
+        type: object
+        fields:
+          - { name: title, label: "Título de la pestaña y de Google", type: string }
+          - { name: description, label: "Descripción en Google (máx. ~155 caracteres)", type: text }
+          - { name: share_description, label: "Descripción al compartir en redes", type: text }

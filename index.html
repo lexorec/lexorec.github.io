@@ -1,10 +1,13 @@
+---
+---
+{%- assign s = site.data.site -%}
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Javier Ordóñez Román — Abogado en Machala | LEXOR Abogados</title>
-    <meta name="description" content="Javier Ordóñez Román, abogado en Machala, El Oro, Ecuador. Derecho laboral, constitucional y administrativo. Estudio Jurídico LEXOR Abogados.">
+    <title>{{ s.seo.title | escape }}</title>
+    <meta name="description" content="{{ s.seo.description | escape }}">
     <meta name="author" content="Javier Ordóñez Román">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://lexorec.github.io/">
@@ -20,7 +23,7 @@
     <meta property="og:locale" content="es_EC">
     <meta property="og:site_name" content="LEXOR Abogados">
     <meta property="og:title" content="Javier Ordóñez Román — Abogado | LEXOR Abogados">
-    <meta property="og:description" content="Abogado en Machala, El Oro, Ecuador. Derecho laboral, constitucional y administrativo.">
+    <meta property="og:description" content="{{ s.seo.share_description | escape }}">
     <meta property="og:url" content="https://lexorec.github.io/">
     <meta property="og:image" content="https://lexorec.github.io/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -30,10 +33,10 @@
     <meta property="profile:last_name" content="Ordóñez Román">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@javior">
-    <meta name="twitter:creator" content="@javior">
+    <meta name="twitter:site" content="@{{ s.contact.twitter }}">
+    <meta name="twitter:creator" content="@{{ s.contact.twitter }}">
     <meta name="twitter:title" content="Javier Ordóñez Román — Abogado | LEXOR Abogados">
-    <meta name="twitter:description" content="Abogado en Machala, El Oro, Ecuador. Derecho laboral, constitucional y administrativo.">
+    <meta name="twitter:description" content="{{ s.seo.share_description | escape }}">
     <meta name="twitter:image" content="https://lexorec.github.io/og-image.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,7 +57,7 @@
           "jobTitle": "Abogado",
           "url": "https://lexorec.github.io/",
           "image": "https://lexorec.github.io/me.jpg",
-          "email": "javierordonezroman@gmail.com",
+          "email": {{ s.contact.email | jsonify }},
           "nationality": "Ecuadorian",
           "worksFor": { "@id": "https://lexorec.github.io/#firm" },
           "alumniOf": [
@@ -68,8 +71,8 @@
             "Derecho contencioso-administrativo", "Derecho civil"
           ],
           "sameAs": [
-            "https://javierordonezroman.wordpress.com/",
-            "https://twitter.com/javior"
+            {{ s.contact.blog_url | jsonify }},
+            "https://twitter.com/{{ s.contact.twitter }}"
           ]
         },
         {
@@ -78,13 +81,13 @@
           "name": "Estudio Jurídico LEXOR Abogados",
           "url": "https://lexorec.github.io/",
           "image": "https://lexorec.github.io/lexor-logo.jpg",
-          "email": "javierordonezroman@gmail.com",
+          "email": {{ s.contact.email | jsonify }},
           "founder": { "@id": "https://lexorec.github.io/#person" },
           "areaServed": "Ecuador",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "9 de mayo 1715 e/ 25 de junio y Sucre. 1er piso, Of. 1",
-            "postalCode": "070206",
+            "streetAddress": {{ s.contact.street | jsonify }},
+            "postalCode": {{ s.contact.postal_code | jsonify }},
             "addressLocality": "Machala",
             "addressRegion": "El Oro",
             "addressCountry": "EC"
@@ -126,90 +129,53 @@
           <address class="contact">
             <p class="contact__row">
               <span class="contact__label">Dirección:</span>
-              9 de mayo 1715 e/ 25 de junio y Sucre. 1er piso, Of. 1. Código Postal: 070206<br>
-              Machala – El Oro – Ecuador
+              {{ s.contact.street }}. Código Postal: {{ s.contact.postal_code }}<br>
+              {{ s.contact.city }}
             </p>
             <p class="contact__row">
               <span class="contact__label">Email:</span>
-              <a href="mailto:javierordonezroman@gmail.com">javierordonezroman@gmail.com</a>
+              <a href="mailto:{{ s.contact.email }}">{{ s.contact.email }}</a>
             </p>
             <p class="contact__row">
               <span class="contact__label">Blog:</span>
-              <a href="https://javierordonezroman.wordpress.com/">javierordonezroman.wordpress.com</a>
+              <a href="{{ s.contact.blog_url }}">{{ s.contact.blog_url | remove_first: "https://" | remove_first: "http://" | remove: "/" }}</a>
             </p>
             <p class="contact__row">
               <span class="contact__label">Twitter:</span>
-              <a href="https://twitter.com/javior">@javior</a>
+              <a href="https://twitter.com/{{ s.contact.twitter }}">@{{ s.contact.twitter }}</a>
             </p>
           </address>
         </aside>
 
         <main class="content">
           <section class="prose">
-            <p>
-              <strong>Psicólogo Clínico</strong>, Facultad de Filosofía, Letras y Ciencias de la Educación
-              de la <a href="https://www.ucsg.edu.ec/">Universidad Católica de Santiago de Guayaquil (UCSG)</a>.
-              <strong>Abogado de los Tribunales y Juzgados de la República del Ecuador</strong>, Facultad de Jurisprudencia y Ciencias Sociales y
-              Políticas de la <a href="http://www.ug.edu.ec/">Universidad de Guayaquil (UG)</a>.
-              <strong>Master en Derecho Constitucional y Administrativo</strong>, Facultad de Derecho de la <a href="http://www.uh.cu/">Universidad de la Habana (UH)</a>.
-            </p>
-
-            <p>
-              En el ejercicio profesional, se desenvuelve como abogado litigante dedicado al área del Derecho
-              individual y colectivo del Trabajo, asuntos administrativos y contenciosos-administrativos,
-              acciones constitucionales, contravenciones penales y de tránsito, asuntos de Derecho Civil,
-              Niñez y Adolescencia. En el ámbito académico, fue docente de los cursos de nivelación universitaria del Sistema
-              Nacional de Nivelación Académica (SNNA) en Guayaquil - Ecuador (2015-2016) y fue docente en la Universidad Metropolitana - sede Machala (2022).
-            </p>
-
-            <p>
-              Los intereses de investigación se centran en el área de derechos y garantías constitucionales,
-              defensa de la Constitución, derechos individuales y colectivos del Trabajo, Administración
-              Pública y Derecho Procesal Constitucional y Laboral.
-            </p>
+            {{ s.bio }}
           </section>
 
           <section class="publications">
             <h2 class="publications__title">PUBLICACIONES</h2>
             <ul class="pub-list">
+              {%- for p in s.publications %}
               <li class="pub">
-                <strong>Acercamiento al tratamiento jurídico del medio ambiente en Cuba: retos y perspectivas.</strong>
-                Colaboración: Msc. Nilton da Cruz de Castro.
-                <em>Universidad &amp; Ciencia - Cuba</em>.
-                Fecha: 01-2021. ISSN-e 2227-2690, Vol. 10, Nº. 1, 2021.
-                <a class="pub__link" href="https://dialnet.unirioja.es/servlet/articulo?codigo=8099705">https://dialnet.unirioja.es/servlet/articulo?codigo=8099705</a>
+                <strong>{{ p.title | escape }}</strong>
+                {%- if p.collaboration and p.collaboration != "" %}
+                Colaboración: {{ p.collaboration | escape }}.
+                {%- endif %}
+                <em>{{ p.journal | escape }}</em>.
+                {{ p.details | escape }}
+                <a class="pub__link" href="{{ p.url }}">{{ p.url }}</a>
               </li>
-
-              <li class="pub">
-                <strong>El derecho al trabajo en el Ecuador: del despido libre a un despido regulado.</strong>
-                <em>Revista jurídica del Trabajo - Uruguay</em>.
-                Fecha: 08-2020. ISSN: 2697-3170.
-                <a class="pub__link" href="https://revistajuridicadeltrabajo.blogspot.com/2020/08/el-derecho-al-trabajo-en-el-ecuador-del.html">https://revistajuridicadeltrabajo.blogspot.com/2020/08/el-derecho-al-trabajo-en-el-ecuador-del.html</a>
-              </li>
-
-              <li class="pub">
-                <strong>Aproximación al derecho a la tutela efectiva de la justicia.</strong>
-                <em>Revista Novedades Jurídicas - Ecuador</em>.
-                Fecha: 09-2019. ISSN: 1390-2539.
-                <a class="pub__link" href="https://fliphtml5.com/wamuc/fyqe/basic">https://fliphtml5.com/wamuc/fyqe/basic</a>
-              </li>
-
-              <li class="pub">
-                <strong>Breve tratamiento de la ejecución de sentencias contra la Administración Pública ecuatoriana en materia laboral.</strong>
-                <em>Revista Magazine de las Ciencias - Ecuador</em>.
-                Fecha: 03-06-2019. ISSN: 2528-8091.
-                <a class="pub__link" href="https://revistas.utb.edu.ec/index.php/magazine/article/view/644">https://revistas.utb.edu.ec/index.php/magazine/article/view/644</a>
-              </li>
+              {%- endfor %}
             </ul>
           </section>
 
           <section class="blog" aria-labelledby="blog-title">
-            <h2 class="blog__title" id="blog-title">Notas de Opinión</h2>
+            <h2 class="blog__title" id="blog-title">{{ s.blog.title | escape }}</h2>
             <ul class="blog-list" id="blog-list">
               <li class="blog__status" id="blog-status">Cargando entradas…</li>
             </ul>
             <p class="blog__more">
-              <a href="https://javierordonezroman.wordpress.com/">Ver todas las entradas en el blog</a>
+              <a href="{{ s.contact.blog_url }}">Ver todas las entradas en el blog</a>
             </p>
           </section>
         </main>

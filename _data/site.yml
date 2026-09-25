@@ -1,0 +1,42 @@
+# Contenido del sitio. Se edita desde Pages CMS (app.pagescms.org)
+# o directamente en este archivo.
+
+seo:
+  title: "Javier Ordóñez Román — Abogado en Machala | LEXOR Abogados"
+  description: "Javier Ordóñez Román, abogado en Machala, El Oro, Ecuador. Derecho laboral, constitucional y administrativo. Estudio Jurídico LEXOR Abogados."
+  share_description: "Abogado en Machala, El Oro, Ecuador. Derecho laboral, constitucional y administrativo."
+
+contact:
+  street: "9 de mayo 1715 e/ 25 de junio y Sucre. 1er piso, Of. 1"
+  postal_code: "070206"
+  city: "Machala – El Oro – Ecuador"
+  email: "javierordonezroman@gmail.com"
+  blog_url: "https://javierordonezroman.wordpress.com/"
+  twitter: "javior"
+
+bio: >-
+  <p><strong>Psicólogo Clínico</strong>, Facultad de Filosofía, Letras y Ciencias de la Educación de la <a href="https://www.ucsg.edu.ec/">Universidad Católica de Santiago de Guayaquil (UCSG)</a>. <strong>Abogado de los Tribunales y Juzgados de la República del Ecuador</strong>, Facultad de Jurisprudencia y Ciencias Sociales y Políticas de la <a href="http://www.ug.edu.ec/">Universidad de Guayaquil (UG)</a>. <strong>Master en Derecho Constitucional y Administrativo</strong>, Facultad de Derecho de la <a href="http://www.uh.cu/">Universidad de la Habana (UH)</a>.</p>
+  <p>En el ejercicio profesional, se desenvuelve como abogado litigante dedicado al área del Derecho individual y colectivo del Trabajo, asuntos administrativos y contenciosos-administrativos, acciones constitucionales, contravenciones penales y de tránsito, asuntos de Derecho Civil, Niñez y Adolescencia. En el ámbito académico, fue docente de los cursos de nivelación universitaria del Sistema Nacional de Nivelación Académica (SNNA) en Guayaquil - Ecuador (2015-2016) y fue docente en la Universidad Metropolitana - sede Machala (2022).</p>
+  <p>Los intereses de investigación se centran en el área de derechos y garantías constitucionales, defensa de la Constitución, derechos individuales y colectivos del Trabajo, Administración Pública y Derecho Procesal Constitucional y Laboral.</p>
+
+publications:
+  - title: "Acercamiento al tratamiento jurídico del medio ambiente en Cuba: retos y perspectivas."
+    collaboration: "Msc. Nilton da Cruz de Castro"
+    journal: "Universidad & Ciencia - Cuba"
+    details: "Fecha: 01-2021. ISSN-e 2227-2690, Vol. 10, Nº. 1, 2021."
+    url: "https://dialnet.unirioja.es/servlet/articulo?codigo=8099705"
+  - title: "El derecho al trabajo en el Ecuador: del despido libre a un despido regulado."
+    journal: "Revista jurídica del Trabajo - Uruguay"
+    details: "Fecha: 08-2020. ISSN: 2697-3170."
+    url: "https://revistajuridicadeltrabajo.blogspot.com/2020/08/el-derecho-al-trabajo-en-el-ecuador-del.html"
+  - title: "Aproximación al derecho a la tutela efectiva de la justicia."
+    journal: "Revista Novedades Jurídicas - Ecuador"
+    details: "Fecha: 09-2019. ISSN: 1390-2539."
+    url: "https://fliphtml5.com/wamuc/fyqe/basic"
+  - title: "Breve tratamiento de la ejecución de sentencias contra la Administración Pública ecuatoriana en materia laboral."
+    journal: "Revista Magazine de las Ciencias - Ecuador"
+    details: "Fecha: 03-06-2019. ISSN: 2528-8091."
+    url: "https://revistas.utb.edu.ec/index.php/magazine/article/view/644"
+
+blog:
+  title: "Notas de Opinión"
