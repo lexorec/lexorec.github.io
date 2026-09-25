@@ -1,51 +1,57 @@
 # Javier Ordóñez Román — LEXOR Abogados
 
-Personal site of Javier Ordóñez Román, lawyer in Machala, Ecuador (Estudio Jurídico LEXOR Abogados).
-Live at **https://lexorec.github.io/**.
+Sitio personal de Javier Ordóñez Román, abogado en Machala, Ecuador (Estudio Jurídico LEXOR Abogados).
+Publicado en **https://lexorec.github.io/**.
 
-A one-page Jekyll site served by GitHub Pages from the `master` branch. All editable text lives in
-`_data/site.yml` and can be edited in the browser through [Pages CMS](https://app.pagescms.org).
+Es un sitio Jekyll de una sola página servido por GitHub Pages desde la rama `master`. Todo el texto
+editable está en `_data/site.yml` y se puede cambiar desde el navegador con
+[Pages CMS](https://app.pagescms.org).
 
 ```
-_config.yml            Site URL and files excluded from the build
-_data/site.yml         Page content: bio, publications, contact, SEO texts
-index.html             Page template (Liquid)
-404.html               "Página no encontrada" page
-stylesheets/styles.css Styles (color and font tokens at the top)
-javascripts/blog.js    Loads the 3 latest posts from the WordPress blog
-.pages.yml             Pages CMS form definition
-me-web.jpg / me.jpg    Portrait (small version shown, full size opens on click)
-lexor-logo.jpg         Firm logo
-og-image.jpg           1200×630 image for link previews (WhatsApp, Facebook, X…)
-favicon*, icon-*, apple-touch-icon.png, site.webmanifest   Icons
-robots.txt, sitemap.xml                                   Search engines
+_config.yml            URL del sitio y archivos excluidos
+_data/site.yml         Contenido: presentación, publicaciones, contacto, textos para buscadores
+index.html             Plantilla de la página (Liquid)
+404.html               Página "Página no encontrada"
+stylesheets/styles.css Estilos (colores y tipografías al inicio)
+javascripts/blog.js    Carga las 3 últimas entradas del blog de WordPress
+.pages.yml             Formularios de Pages CMS
+me-web.jpg / me.jpg    Retrato (versión pequeña en la página; la grande se abre al hacer clic)
+lexor-logo.jpg         Logo del estudio
+og-image.jpg           Imagen 1200×630 para vistas previas al compartir (WhatsApp, Facebook, X…)
+favicon*, icon-*, apple-touch-icon.png, site.webmanifest   Íconos
+robots.txt, sitemap.xml                                   Buscadores
 ```
 
-## Editing content (Pages CMS)
+## Editar el contenido (Pages CMS)
 
-1. Go to https://app.pagescms.org and sign in with the GitHub account `lexorec`.
-2. Open the `lexorec.github.io` repository (install the Pages CMS GitHub app on it the first time).
-3. Open **Contenido del sitio**, edit, and **Save**. Each save is a commit; the site updates in about a minute.
+1. Entrar a <https://app.pagescms.org> con la cuenta de GitHub `lexorec`.
+2. Abrir el repositorio `lexorec.github.io` (la primera vez hay que instalar la app de Pages CMS en él).
+3. Abrir **Contenido del sitio**, editar y pulsar **Save**. Cada guardado es un commit; el sitio se
+   actualiza en un minuto aproximadamente.
 
-Editable sections: *Presentación* (bio), *Publicaciones*, *Contacto*, *Notas del blog* (section title)
-and *Buscadores y redes sociales* (page title and descriptions).
+Secciones editables: *Presentación*, *Publicaciones*, *Contacto*, *Notas del blog* (título de la sección)
+y *Buscadores y redes sociales* (título de la página y descripciones).
 
-Not editable from the CMS (edit the files directly):
+No se editan desde el CMS (hay que cambiar los archivos directamente):
 
-- **Portrait**: replace both `me-web.jpg` (800×800, shown on the page) and `me.jpg` (full size).
-- **Logo, name heading and firm name**: in `index.html`.
-- **Blog source**: `javascripts/blog.js` reads `javierordonezroman.wordpress.com` through the public
-  WordPress.com API. Posts appear automatically when he publishes; nothing to do here.
-- **Structured data** (the JSON-LD block in `index.html`) takes email, address, blog and Twitter from
-  `_data/site.yml`; areas of practice and universities are written in the template.
+- **Retrato**: reemplazar `me-web.jpg` (800×800, el que se ve en la página) y `me.jpg` (tamaño completo).
+- **Logo, nombre y nombre del estudio**: en `index.html`.
+- **Blog**: `javascripts/blog.js` lee `javierordonezroman.wordpress.com` mediante la API pública de
+  WordPress.com. Las entradas nuevas aparecen solas cuando publica; no hay que hacer nada.
+- **Datos estructurados** (el bloque JSON-LD en `index.html`): el email, la dirección, el blog y Twitter
+  salen de `_data/site.yml`; las áreas de práctica y las universidades están escritas en la plantilla.
 
-## Local preview
+## Vista previa local
 
-Needs Ruby 3.3 (`brew install ruby@3.3`):
+Requiere Ruby 3.3 (`brew install ruby@3.3`):
 
 ```bash
 bundle install
 bundle exec jekyll serve
 ```
 
-Then open http://localhost:4000.
+Luego abrir http://localhost:4000.
+
+## Notas
+
+- **Analítica**: Teradive (script al final de `index.html`).
